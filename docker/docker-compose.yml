@@ -6,7 +6,7 @@ services:
     image: postgres:12.4
     restart: always
     environment:
-      POSTGRES_DB: users
+      POSTGRES_DB: usersdb
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root123
     ports:
