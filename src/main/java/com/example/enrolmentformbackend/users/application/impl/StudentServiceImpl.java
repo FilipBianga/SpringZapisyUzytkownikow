@@ -28,4 +28,16 @@ public class StudentServiceImpl implements StudentService {
         return studentJpaRepository.findById(id)
                 .orElseThrow();
     }
+
+
+    // must add validation if student exist?
+    public Student updateStudent(Student student, Long id) {
+        return null;
+    }
+
+    @Override
+    public void removeStudentById(Long id) {
+        studentJpaRepository.deleteById(id);
+    }
+
 }

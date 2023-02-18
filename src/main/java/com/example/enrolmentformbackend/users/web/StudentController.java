@@ -22,12 +22,18 @@ public class StudentController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Student> getStudentById(@PathVariable("id") long studentId) {
+    public ResponseEntity<Student> getStudentById(@PathVariable("id") Long studentId) {
         return new ResponseEntity<>(service.getStudentById(studentId), HttpStatus.OK);
     }
 
     @PostMapping("/student")
     public ResponseEntity<Student> saveStudentToDb(@RequestBody Student student) {
         return new ResponseEntity<>(service.saveStudent(student), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteById(@PathVariable Long id) {
+        service.removeStudentById(id);
     }
 }
