@@ -6,5 +6,5 @@ Główni użytkownicy:
 <li>Doktorant</li>
 <li>Profesor</li>
 
-W części backend storzony zostanie REST, który umożliwi dodawania, edytowanie oraz usuwanie użytkowników, możliwość wszystkich 3 czynności będzie jedynie możliwa po zalogowaniu jako użytkownik - administrator. Zwykły użytkownik
+W części backend stworzony zostanie REST, który umożliwi dodawania, edytowanie oraz usuwanie użytkowników, możliwość wszystkich 3 czynności będzie jedynie możliwa po zalogowaniu jako użytkownik - administrator. Zwykły użytkownik
 będzie miał możliwość jedynie dodawanie.
