@@ -2,6 +2,12 @@ package com.example.enrolmentformbackend.users.application;
 
 import com.example.enrolmentformbackend.users.domain.Student;
 
-public interface UsersService {
+import java.util.List;
+
+public interface StudentService {
     Student saveStudent(Student student);
+
+    List<Student> getAllStudent();
+
+    Student getStudentById(Long id);
 }
