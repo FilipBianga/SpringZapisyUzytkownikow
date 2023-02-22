@@ -1,6 +1,6 @@
 package com.example.enrolmentformbackend.users.web;
 
-import com.example.enrolmentformbackend.users.application.impl.StudentServiceImpl;
+import com.example.enrolmentformbackend.users.application.StudentService;
 import com.example.enrolmentformbackend.users.domain.Student;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
 class StudentControllerTest {
 
     @MockBean
-    StudentServiceImpl service;
+    StudentService studentService;
 
     @Autowired
     StudentController controller;
@@ -29,7 +29,7 @@ class StudentControllerTest {
         //given
         Student filip = new Student("Filip", "Romanski", "froman@wp.pl", 18909, "IT");
         Student mati = new Student("Mateusz", "Waldos", "waldos@wp.pl", 43909, "IT");
-        when(service.getAllStudent()).thenReturn(List.of(filip, mati));
+        when(studentService.getAllStudent()).thenReturn(List.of(filip, mati));
 
         //when
         List<Student> students = controller.getAllStudent();

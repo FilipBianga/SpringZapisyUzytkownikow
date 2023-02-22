@@ -12,9 +12,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "student")
-public class Student extends BaseEntity {
-
+@Table(name = "phd_student")
+public class PhD_Student extends BaseEntity {
     @Column(name = "first_name")
     private String firstname;
 
@@ -24,9 +23,10 @@ public class Student extends BaseEntity {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "nr_album")
-    private int nr_album;
-
     @Column(name = "faculty")
     private String faculty;
+
+    @Column(name = "departament")
+    private String departament;
+
 }

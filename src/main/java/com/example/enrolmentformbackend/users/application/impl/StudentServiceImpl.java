@@ -29,14 +29,24 @@ public class StudentServiceImpl implements StudentService {
                 .orElseThrow();
     }
 
-
-    // must add validation if student exist?
+    @Override
     public Student updateStudent(Student student, Long id) {
-        return null;
+        Student existingStudent = studentJpaRepository.findById(id).orElseThrow();
+
+        existingStudent.setFirstname(student.getFirstname());
+        existingStudent.setSurname(student.getSurname());
+        existingStudent.setEmail(student.getEmail());
+        existingStudent.setNr_album(student.getNr_album());
+        existingStudent.setFaculty(student.getFaculty());
+
+        studentJpaRepository.save(existingStudent);
+
+        return existingStudent;
     }
 
     @Override
     public void removeStudentById(Long id) {
+        studentJpaRepository.findById(id).orElseThrow();
         studentJpaRepository.deleteById(id);
     }
 
