@@ -15,14 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {StudentController.class})
+@ContextConfiguration(classes = {UsersController.class})
 class StudentControllerTest {
 
     @MockBean
     StudentService studentService;
 
     @Autowired
-    StudentController controller;
+    UsersController controller;
 
     @Test
     public void getAllStudent() {
